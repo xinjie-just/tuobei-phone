@@ -1,0 +1,436 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+blockquote,
+pre,
+textarea,
+fieldset,
+figure,
+ul,
+ol,
+dl,
+dd,
+menu {
+    margin: 0;
+}
+
+input,
+textarea,
+button,
+select,
+option,
+fieldset,
+legend,
+ul,
+ol,
+menu,
+th,
+td {
+    padding: 0;
+}
+
+hr,
+progress,
+input,
+textarea,
+button,
+select,
+fieldset {
+    border: 0;
+}
+
+html {
+    font-size: 100px;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+template,
+[hidden] {
+    display: none;
+}
+
+/* ===链接=== */
+a {
+    color: inherit;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+}
+a:focus, a:active, a:hover {
+    outline-width: 0;
+    text-decoration: none;
+}
+
+/* ===文本=== */
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+}
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+dfn {
+    font-style: italic;
+}
+
+article h1,
+section h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* ===嵌入式内容=== */
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ===分组内容=== */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: .2rem;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+/* ===表单=== */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    margin: 0;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+button:focus,
+html [type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+/* ===表格=== */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+/* ===列表=== */
+ol,
+ul {
+    list-style-type: none;
+}
+
+/* ===关于浮动=== */
+/*快捷样式*/
+figure {
+    overflow: hidden;
+}
+figure a {
+    display: block;
+}
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+label:hover {
+    opacity: .8;
+}
+
+/*validate错误提示*/
+label.error {
+    color: #f00;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#errorTips {
+    display: block;
+    color: #f00;
+    visibility: hidden;
+}
+
+/*分享注册*/
+body {
+    width: 100%;
+    max-width: 767px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1rem;
+    color: #333;
+    font-family: "Microsoft Yahei", Arial, sans-serif;
+}
+.signup-body {
+    width: 100%;
+    height: 100%;
+    background: transparent url("../images/body-bg.png") no-repeat center / cover;
+}
+.signup-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+
+}
+.slogan {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.vip {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: .3rem auto 0;
+}
+.signup-heading {
+    margin-top: .6rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    font-family: "黑体";
+    text-align: center;
+    color: #fff;
+}
+#signupForm {
+    margin: .2rem auto 0;
+    width: 100%;
+}
+#signupForm > div {
+    position: relative;
+    margin-bottom: .2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 1.2rem;
+}
+#signupForm > div > input {
+    display: block;
+    flex: 1;
+    height: 1.2rem;
+    border-radius: .06rem;
+    background-color: #fff;
+    font-size: .4rem;
+    padding-right: .4rem;
+    padding-left: .4rem;
+    color: #b5b5bd;
+}
+#signupForm > div > input:focus {
+    border: 1px solid #f1af31;
+    outline: none;
+}
+.code input {
+    margin-right: .2rem;
+}
+.code .get-code {
+    display: block;
+    width: 3rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    border-radius: .06rem;
+    background-color: #f1af31;
+    color: #fff;
+    font-size: .4rem;
+}
+.pwd img {
+    display: block;
+    width: .72rem;
+    height: .41rem;
+    position: absolute;
+    top: 50%;
+    right: .7rem;
+    transform: translateY(-50%);
+    font-size: .3rem;
+}
+.signup-submit {
+    display: block;
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    border-radius: .06rem;
+    background-color: #f1af31;
+    color: #fff;
+    font-size: .4rem;
+    font-weight: bold;
+}
+.signup-terms {
+    display: block;
+    font-size: .34rem;
+    margin-top: .2rem;
+    color: #fff;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>拓贝 vip卡共享倡导者</title>
+        <meta name="keywords" content="拓贝，VIP折扣" />
+        <meta name="description" content="拓贝，VIP折扣，消费越多折扣越多，让每个人都能享受vip待遇" />
+        <link rel="stylesheet" href="styles/tuobei-phone.css" />
+        <script src="scripts/resize.js"></script>
+    </head>
+    <body class="signup-body">
+        <main class="signup-main">
+            <img src="images/slogan.png" alt="拓贝slogan" class="slogan">
+            <img src="images/vip.png" alt="拓贝vip加入提示" class="vip">
+            <h1 class="signup-heading">快速注册</h1>
+            <form action="" method="post" name="signupForm" id="signupForm">
+                <div class="phone">
+                    <input type="tel" id="phone" name="phone" placeholder="请输入手机号">
+                </div>
+                <div class="code">
+                    <input type="text" id="code" name="code" placeholder="请输入验证码">
+                    <a href="#" id="getCode" name="getCode" class="get-code" title="获取验证码">获取验证码</a>
+                </div>
+                <div class="pwd">
+                    <input type="password" id="pwd" name="pwd" placeholder="请输入密码">
+                    <img src="images/pwd-hide.png" alt="密码隐藏图标" id="togglePwdIcon">
+                </div>
+                <button type="submit" id="signupSubmit" class="signup-submit">注册</button>
+                <a href="#" title="注册条款" class="signup-terms">注册条款</a>
+            </form>
+        </main>
+        <script>
+            window.onload = function (){
+                var togglePwdIcon = document.getElementById("togglePwdIcon");
+                var pwdInput = document.getElementById("pwd");
+                togglePwdIcon.onclick = function () {
+                    if (pwdInput.getAttribute("type") == "password") {
+                        this.setAttribute("src", "images/pwd-show.png");
+                        this.setAttribute("alt", "密码显示图标");
+                        pwdInput.setAttribute("type", "text");
+                    }else {
+                        this.setAttribute("src", "images/pwd-hide.png");
+                        this.setAttribute("alt", "密码隐藏图标");
+                        pwdInput.setAttribute("type", "password");
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
