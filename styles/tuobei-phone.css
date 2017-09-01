@@ -353,10 +353,10 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: .3rem auto 0;
+    margin: .2rem auto 0;
 }
 .signup-heading {
-    margin-top: .6rem;
+    margin-top: .4rem;
     font-size: 0.6rem;
     font-weight: 600;
     font-family: "黑体";
@@ -370,15 +370,21 @@ body {
 #signupForm > div {
     position: relative;
     margin-bottom: .2rem;
+    display: -webkit-flex;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+    -webkit-flex-direction: row;
+             flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+             flex-wrap: nowrap;
+    -webkit-align-items: center;
+             align-items: center;
+    -webkit-justify-content: space-between;
+             justify-content: space-between;
     width: 100%;
     height: 1.2rem;
 }
 #signupForm > div > input {
-    display: block;
+    -webkit-flex: 1;
     flex: 1;
     height: 1.2rem;
     border-radius: .06rem;
@@ -388,13 +394,6 @@ body {
     padding-left: .4rem;
     color: #b5b5bd;
 }
-#signupForm > div > input:focus {
-    border: 1px solid #f1af31;
-    outline: none;
-}
-.code input {
-    margin-right: .2rem;
-}
 .code .get-code {
     display: block;
     width: 3rem;
@@ -402,9 +401,23 @@ body {
     line-height: 1.2rem;
     text-align: center;
     border-radius: .06rem;
-    background-color: #f1af31;
+    background-color: #999;
     color: #fff;
     font-size: .4rem;
+    margin-left: .2rem;
+}
+.img-code img {
+    display: block;
+    width: 2rem;
+    height: 1rem;
+    margin-left: .2rem;
+}
+.img-code .change-img-code {
+    display: block;
+    padding: .04rem .08rem;
+    font-size: .36rem;
+    color: #fff;
+    margin-left: .2rem;
 }
 .pwd img {
     display: block;

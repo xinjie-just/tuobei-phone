@@ -19,6 +19,12 @@
                 <div class="phone">
                     <input type="tel" id="phone" name="phone" placeholder="请输入手机号">
                 </div>
+                <div class="img-code">
+                    <input type="text" id="imgCode" name="imgCode" placeholder="请输入图片验证码">
+                    <img src="images/img-code.jpg" alt="图片验证码">
+                    <!--下面的链接不要可去掉，不影响布局-->
+                    <!--<a href="#" title="换一张" class="change-img-code">换一张？</a>-->
+                </div>
                 <div class="code">
                     <input type="text" id="code" name="code" placeholder="请输入验证码">
                     <a href="#" id="getCode" name="getCode" class="get-code" title="获取验证码">获取验证码</a>
@@ -33,10 +39,11 @@
         </main>
         <script>
             window.onload = function (){
+                // 密码的隐藏与显示
                 var togglePwdIcon = document.getElementById("togglePwdIcon");
                 var pwdInput = document.getElementById("pwd");
                 togglePwdIcon.onclick = function () {
-                    if (pwdInput.getAttribute("type") == "password") {
+                    if (pwdInput.getAttribute("type") === "password") {
                         this.setAttribute("src", "images/pwd-show.png");
                         this.setAttribute("alt", "密码显示图标");
                         pwdInput.setAttribute("type", "text");
@@ -45,6 +52,26 @@
                         this.setAttribute("alt", "密码隐藏图标");
                         pwdInput.setAttribute("type", "password");
                     }
+                };
+
+                // 图形验证码为空时，不允许获取短信验证码
+                var imgCode = document.getElementById("imgCode");
+                change(imgCode);
+                function change(obj) {
+                    var getCode = document.getElementById("getCode");
+                    if(!(obj.value)) {
+                        getCode.style.backgroundColor = "#999";
+                        getCode.style.cursor = "not-allowed";
+                        getCode.onclick = function (e) {
+                            e.preventDefault();
+                        }
+                    }else {
+                        getCode.style.backgroundColor = "#f1af31";
+                        getCode.style.cursor = "pointer";
+                    }
+                }
+                imgCode.onchange = function () {
+                    change(this);
                 }
             }
         </script>
