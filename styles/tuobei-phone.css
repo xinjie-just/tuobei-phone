@@ -394,7 +394,7 @@ body {
     padding-left: .4rem;
     color: #b5b5bd;
 }
-.code .get-code {
+.code > #getCode {
     display: block;
     width: 3rem;
     height: 1.2rem;
@@ -405,6 +405,7 @@ body {
     color: #fff;
     font-size: .4rem;
     margin-left: .2rem;
+    cursor: not-allowed;
 }
 .img-code img {
     display: block;
